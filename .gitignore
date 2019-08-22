@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Mobile.BuildTools secrets file
+SimpleMedicineApp/SimpleMedicineApp/secrets.json
+
 # User-specific files
 *.suo
 *.user

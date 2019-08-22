@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
+using SimpleMedicineApp.Helpers;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,8 +19,11 @@ namespace SimpleMedicineApp
         }
 
         protected override void OnStart()
-        {
+        { 
             // Handle when your app starts
+            AppCenter.Start(
+                appSecret:$"android={Secrets.AppCenterAndroidSecret}",
+                typeof(Analytics), typeof(Crashes), typeof(Distribute));
         }
 
         protected override void OnSleep()
